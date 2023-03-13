@@ -422,7 +422,7 @@ class PytorchDRiseWrapper(
             expanded_class_scores = od_common.expand_class_scores(
                 raw_detection[SCORES],
                 raw_detection[LABELS],
-                self._number_of_classes)
+                self._number_of_classes+1)
 
             detections.append(
                 od_common.DetectionRecord(
